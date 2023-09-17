@@ -4,7 +4,7 @@ import MainPages from './pages/MainPages';
 
 function App() {
   return (
-    <MainPages/>
+      <MainPages/>
   );
 }
 
