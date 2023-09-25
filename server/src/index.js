@@ -25,8 +25,9 @@ app.get("/getAllCurrencies",async(req, res)=>{
 //get the target amount
 app.get("/convert", async(req, res)=>{
     const{date,sourceCurrency,targetCurrency,amountInSourceCurrency} = req.query;
+    const dataUrl ='https://openexchangerates.org/api/historical/'+date+'.json?app_id=9f8533b53eca43258f9d8f1d0589067f';
     try{
-        const dataUrl ='https://openexchangerates.org/api/historical/${date}.json?app_id=9f8533b53eca43258f9d8f1d0589067f';
+   
         const dataResponse = await axios.get(dataUrl);
         const rates = dataResponse.data.rates;
 
